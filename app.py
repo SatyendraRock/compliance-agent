@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 import os
 
 st.set_page_config(page_title="AI Compliance Agent", layout="centered")
-st.title("🛡️ AI Compliance Agent")
+st.title("🛡️Welcome to SATYENDRA AI Compliance Agent")
 st.write("Upload a compliance document and ask questions about it!")
 
 uploaded_file = st.file_uploader("📄 Upload a .txt file", type=["txt"])
@@ -28,7 +28,7 @@ if uploaded_file:
     retriever = vectorstore.as_retriever()
 
     # User query
-    query = st.text_input("💬 Ask a question about the document:")
+    query = st.text_input("💬 Arre bhaya question puchna re yaha jo document chipkaya hai tune-Ask a question about the document:")
 
     if query:
         results = retriever.get_relevant_documents(query)
